@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1438</width>
+    <width>1437</width>
     <height>886</height>
    </rect>
   </property>
@@ -599,7 +599,7 @@
      <string>1</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="B2">
+   <widget class="QPushButton" name="B3">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -612,7 +612,7 @@
      <string>3</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="B3">
+   <widget class="QPushButton" name="B5">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -625,7 +625,7 @@
      <string>5</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="B5">
+   <widget class="QPushButton" name="B9">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -638,7 +638,7 @@
      <string>9</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="B9">
+   <widget class="QPushButton" name="B8">
     <property name="geometry">
      <rect>
       <x>750</x>
@@ -651,7 +651,7 @@
      <string>8</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="B7">
+   <widget class="QPushButton" name="B4">
     <property name="geometry">
      <rect>
       <x>610</x>
@@ -664,7 +664,7 @@
      <string>4</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="B4">
+   <widget class="QPushButton" name="B7">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -677,7 +677,7 @@
      <string>7</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="B6">
+   <widget class="QPushButton" name="B2">
     <property name="geometry">
      <rect>
       <x>540</x>
@@ -690,7 +690,7 @@
      <string>2</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="B8">
+   <widget class="QPushButton" name="B6">
     <property name="geometry">
      <rect>
       <x>680</x>
@@ -744,7 +744,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>정답</string>
+     <string>입력</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -888,6 +888,19 @@
     </property>
     <property name="text">
      <string>확인</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>1350</x>
+      <y>691</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
