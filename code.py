@@ -5,9 +5,12 @@ import sys
 
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
+from PyQt5.QtGui import QFont
 from PyQt5 import uic
 
 formClass = uic.loadUiType('PYQT.ui')[0]
+
+state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 class MainformClass(QMainWindow, formClass):
     def __init__(self):
@@ -40,6 +43,8 @@ class MainformClass(QMainWindow, formClass):
             self.T5.setPlainText('학')
             self.T6.setPlainText('교')
             self.label_14.setText('정답')
+            self.B1.hide()
+            state[0] = 1
 
         elif K == '등차수열' and self.now == 2:
             self.T4.setPlainText('등')
@@ -47,7 +52,8 @@ class MainformClass(QMainWindow, formClass):
             self.T10.setPlainText('수')
             self.T12.setPlainText('열')
             self.label_14.setText('정답')
-
+            self.B2.hide()
+            state[1] = 1
         elif K == '열역학제2법칙' and self.now ==3:
             self.T12.setPlainText('열')
             self.T13.setPlainText('역')
@@ -57,13 +63,15 @@ class MainformClass(QMainWindow, formClass):
             self.T17.setPlainText('법')
             self.T18.setPlainText('칙')
             self.label_14.setText('정답')
-
+            self.B3.hide()
+            state[2] = 1
         elif K == '학술제' and self.now ==4:
             self.T14.setPlainText('학')
             self.T19.setPlainText('술')
             self.T25.setPlainText('제')
             self.label_14.setText('정답')
-
+            self.B4.hide()
+            state[3] = 1
         elif K == '고교학점제' and self.now ==5:
             self.T21.setPlainText('고')
             self.T22.setPlainText('교')
@@ -71,19 +79,22 @@ class MainformClass(QMainWindow, formClass):
             self.T24.setPlainText('점')
             self.T25.setPlainText('제')
             self.label_14.setText('정답')
-
+            self.B5.hide()
+            state[4] = 1
         elif K == '점근선' and self.now ==6:
             self.T24.setPlainText('점')
             self.T27.setPlainText('근')
             self.T29.setPlainText('선')
             self.label_14.setText('정답')
-
+            self.B6.hide()
+            state[5] = 1
         elif K == '선행사' and self.now ==7:
             self.T29.setPlainText('선')
             self.T30.setPlainText('행')
             self.T31.setPlainText('사')
             self.label_14.setText('정답')
-
+            self.B7.hide()
+            state[6] = 1
         elif K == '법무부장관' and self.now ==8:
             self.T17.setPlainText('법')
             self.T20.setPlainText('무')
@@ -91,22 +102,35 @@ class MainformClass(QMainWindow, formClass):
             self.T28.setPlainText('장')
             self.T32.setPlainText('관')
             self.label_14.setText('정답')
-
+            self.B8.hide()
+            state[7] = 1
         elif K == '관형사' and self.now ==9:
             self.T32.setPlainText('관')
             self.T33.setPlainText('형')
             self.T34.setPlainText('사')
             self.label_14.setText('정답')
-
+            self.B9.hide()
+            state[8] = 1
         elif K == '훈트규칙' and self.now ==10:
             self.T7.setPlainText('훈')
             self.T9.setPlainText('트')
             self.T11.setPlainText('규')
             self.T18.setPlainText('칙')
             self.label_14.setText('정답')
+            self.B10.hide()
+            state[9] = 1
         else:
             self.label_14.setText('땡')
-            
+
+        if 0 not in state:
+            msg = QMessageBox()
+            font = QFont()
+            font.setPointSize(24)
+            msg.setIcon(QMessageBox.Information)
+            msg.setWindowTitle('Clear!')
+            msg.setText('축하합니다 \n모든 문제를 맞추셨습니다')
+            msg.setFont(font)
+            msg.exec_()
 
     def b1(self):
         self.now = 1
